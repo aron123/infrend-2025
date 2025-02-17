@@ -6,7 +6,7 @@ export interface Applicant {
     desiredSalary: number;
 }
 
-export const applicants: Applicant[] = [
+export const APPLICANTS_LIST: Applicant[] = [
     {
         id: 1,
         name: 'Tóth Béla',
