@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h4>HR nyilvántartó</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-9">
+      <button class="btn btn-outline-success" (click)="showForm()">Új jelentkező</button>
+      <ul>
+        @for(applicant of applicants; track applicant.id) {
+          <li [class.text-danger]="applicant.experience == '0-5' && applicant.desiredSalary > 500000">
+            {{ applicant.name }}, {{ applicant.role }}
+            {{ applicant.experience }} év tapasztalattal,
+            fizetési igény: {{ applicant.desiredSalary }} Ft
+            <button class="btn btn-outline-danger" (click)="removeApplicant(applicant)">
+              Törlés
+            </button>
+          </li>
+        }
+      </ul>
+    </div>
+    <div class="col-md-3">
+      @if(formVisible) {
+        <div class="mb-3">
+          <label for="name" class="form-label">Név</label>
+          <input type="text" class="form-control" id="name" name="name"
+            [(ngModel)]="newApplicant.name">
+        </div>
+        <div class="mb-3">
+          <label for="role" class="form-label">Munkakör</label>
+          <input type="text" class="form-control" id="role" name="role"
+            [(ngModel)]="newApplicant.role">
+        </div>
+        <div class="mb-3">
+          <label for="experience" class="form-label">Tapasztalat</label>
+          <select class="form-select" name="experience" id="experience"
+            [(ngModel)]="newApplicant.experience">
+            <option value="0-5">0-5 év</option>
+            <option value="5-10">5-10 év</option>
+            <option value="10+">több, mint 10 év</option>
+          </select>
+        </div>
+        <div class="mb-3">
+          <label for="salary" class="form-label">Fizetési igény</label>
+          <input type="number" class="form-control" id="salary" name="salary"
+            [(ngModel)]="newApplicant.desiredSalary">
+        </div>
+        <div class="text-end">
+          <button class="btn btn-outline-success" (click)="saveApplicant()">
+            Mentés
+          </button>
+        </div>
+      }
+    </div>
+  </div>
+</div>

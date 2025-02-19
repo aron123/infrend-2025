@@ -12,7 +12,7 @@ Követelmények ismertetése, szoftverek telepítése, ismerkedés az Angular ke
 Angular alkalmazások felépítése, sztring interpoláció, vezérlési blokkok (`@if`, `@else`, `@for`). Bootstrap alapok, grid rendszer.
 
 - [Adatok](https://github.com/aron123/infrend-2025/blob/main/_data/applicants.ts)
-- Projekt: HR nyilvántartó rendszer
+- Projekt: [HR nyilvántartó rendszer](https://github.com/aron123/infrend-2025/tree/main/hr-application)
 
 Dokumentációk, egyéb anyagok:
 - [Angular - Control Flow](https://angular.dev/guide/templates/control-flow)

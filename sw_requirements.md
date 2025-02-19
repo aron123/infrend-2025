@@ -15,8 +15,8 @@
 ## Új Angular projekt létrehozása és elindítása
 1. Parancssorban be kell lépni egy tetszőleges mappába, majd generálni egy új projektet: `ng new infrend`
     ```
-    Would you like to add Angular routing? Yes
     Which stylesheet format would you like to use? CSS
+    Do you want to enable Server-Side Rendering (SSR) ...? No
     ```
     Ennek hatására egy `infrend` nevű mappa keletkezik, benne egy üres Angular-projekttel.
 
