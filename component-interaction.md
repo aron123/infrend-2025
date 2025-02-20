@@ -4,11 +4,13 @@
 
 ![Semantic versioning app's structure](./assets/semver-structure.drawio.png)
 
+<!--
 <details>
 <summary>Komponensek kommunikációja</summary>
 
 ![Semantic versioning app's components](./assets/semver-interaction.drawio.png)
 </details>
+-->
 
 ## 2. Szavazás példa
 a) Készítsük el az alábbi funkciókkal rendelkező alkalmazást!
