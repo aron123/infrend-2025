@@ -17,10 +17,12 @@ a) Készítsük el az alábbi funkciókkal rendelkező alkalmazást!
 
 ![Voting app's layout](./assets/voting-structure.gif)
 
+<!--
 <details>
 <summary>Komponensekre bontás</summary>
 
 ![Voting app's components](./assets/voting-structure.drawio.svg)
 </details>
+-->
 
 b) Fejlesszük tovább az alkalmazást: a szavazást megjelenítő komponens igen/nem válaszok helyett fogadjon előre megadott válaszlehetőségeket, amikre szavazni lehet!
