@@ -20,7 +20,7 @@ Dokumentációk, egyéb anyagok:
 - [Emmet abbreviations](https://docs.emmet.io/abbreviations/syntax/) (+[Emmet in VSCode](https://code.visualstudio.com/docs/editor/emmet))
 
 ## 3. hét
-Angular alkalmazás komponensekre bontása, komponensek közötti kommunikáció. Kódgenerálás (`ng generate`) és adatkötés eszközei (`input` és `output` függvények).
+Angular alkalmazás komponensekre bontása, komponensek közötti kommunikáció. Kódgenerálás (`ng generate`) és adatkötés eszközei (`@Input` és `@Output` dekorátorok).
 
 - [Feladatok több komponens használatára](component-interaction.md)
 - Projekt: Szemantikus verziószámozás
