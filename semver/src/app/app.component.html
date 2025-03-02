@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Current app version</h1>
+      <h2>v{{version.major}}.{{version.minor}}.{{version.patch}}</h2>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <app-control (versionChanged)="incrementVersion($event)"></app-control>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <app-changelog [changes]="changelog"></app-changelog>
+    </div>
+  </div>
+</div>
