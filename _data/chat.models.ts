@@ -1,5 +1,5 @@
 export interface CompletionRequest {
-    model: 'gpt-3.5-turbo';
+    model: 'gemini-2.0-flash';
     max_tokens: number;
     messages: Message[];
 }

@@ -31,6 +31,18 @@ Dokumentációk, egyéb anyagok:
 - [Custom events with outputs](https://angular.dev/guide/components/outputs)
 - [Semantic Versioning 2.0.0](https://semver.org/)
 
+## 4. hét
+Az Angular router használata, guard-ok. Dependency injection, service osztályok.
+
+- [Adatmodell](https://github.com/aron123/infrend-2025/blob/main/_data/chat.models.ts)
+- [Görgetés script](scrolling.md)
+
+- Projekt: AI Chat alkalmazás
+
+Dokumentáció:
+- [Routing in SPAs](https://dev.to/marcomonsanto/routing-in-spas-173i)
+- [Common routing tasks in Angular](https://angular.dev/guide/routing/common-router-tasks)
+
 ## Elérhetőség
 Kiss Áron, tanszéki mérnök<br>
 ME-GÉIK Informatikai Intézet
