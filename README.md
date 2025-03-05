@@ -36,6 +36,10 @@ Az Angular router használata, guard-ok. Dependency injection, service osztályo
 
 - Projekt: [AI Chat alkalmazás](https://github.com/aron123/infrend-2025/tree/main/ai-chat)
 
+Dokumentáció:
+- [Routing in SPAs](https://dev.to/marcomonsanto/routing-in-spas-173i)
+- [Common routing tasks in Angular](https://angular.dev/guide/routing/common-router-tasks)
+
 ## 5. hét
 HTTP kérések kezelése Angular-ban.
 
@@ -45,8 +49,8 @@ HTTP kérések kezelése Angular-ban.
 - Projekt: [AI Chat alkalmazás folytatása](https://github.com/aron123/infrend-2025/tree/main/ai-chat)
 
 Dokumentáció:
-- [Routing in SPAs](https://dev.to/marcomonsanto/routing-in-spas-173i)
-- [Common routing tasks in Angular](https://angular.dev/guide/routing/common-router-tasks)
+- [OpenAI Developer Platform](https://platform.openai.com/docs/overview)
+- [Gemini Developer API](https://ai.google.dev/)
 
 ## Elérhetőség
 Kiss Áron, tanszéki mérnök<br>
