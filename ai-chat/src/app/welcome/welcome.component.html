@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1>Welcome to our AI assistant!</h1>
+            <p>Please log in.</p>
+        </div>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name"
+                    [(ngModel)]="userName">
+            </div>
+            <div class="mb-3">
+                <label for="apiKey" class="form-label">API key</label>
+                <input type="password" class="form-control" id="apiKey" name="apiKey"
+                    [(ngModel)]="apiKey">
+            </div>
+            <div class="text-end">
+                <button class="btn btn-outline-primary" (click)="login()">Submit</button>
+            </div>
+        </div>
+    </div>
+</div>
