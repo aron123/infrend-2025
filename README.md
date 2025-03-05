@@ -23,7 +23,7 @@ Dokumentációk, egyéb anyagok:
 Angular alkalmazás komponensekre bontása, komponensek közötti kommunikáció. Kódgenerálás (`ng generate`) és adatkötés eszközei (`@Input` és `@Output` dekorátorok).
 
 - [Feladatok több komponens használatára](component-interaction.md)
-- Projekt: Szemantikus verziószámozás
+- Projekt: [Szemantikus verziószámozás](https://github.com/aron123/infrend-2025/tree/main/semver)
 
 Dokumentációk, egyéb anyagok:
 - [Angular Components Overview](https://angular.dev/guide/components)
@@ -34,10 +34,15 @@ Dokumentációk, egyéb anyagok:
 ## 4. hét
 Az Angular router használata, guard-ok. Dependency injection, service osztályok.
 
+- Projekt: [AI Chat alkalmazás](https://github.com/aron123/infrend-2025/tree/main/ai-chat)
+
+## 5. hét
+HTTP kérések kezelése Angular-ban.
+
 - [Adatmodell](https://github.com/aron123/infrend-2025/blob/main/_data/chat.models.ts)
 - [Görgetés script](scrolling.md)
 
-- Projekt: AI Chat alkalmazás
+- Projekt: [AI Chat alkalmazás folytatása](https://github.com/aron123/infrend-2025/tree/main/ai-chat)
 
 Dokumentáció:
 - [Routing in SPAs](https://dev.to/marcomonsanto/routing-in-spas-173i)
