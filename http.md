@@ -5,10 +5,10 @@ A HTTP _(**H**yper**T**ext **T**ransfer **P**rotocol)_ egy TCP feletti, alkalmaz
 ## Működése
 
 * A HTTP egy **kliens-szerver** protokoll, amely kapcsolatot teremt egy kliens (például egy webböngésző) és egy szerver (például egy webszerver) között.
-* A HTTP egy **állapotmentes** protokoll, ami azt jelenti, hogy nem emlékszik a korábbi kommunikációra a kliens és a szerver között. Minden kérés/válasz csere független az előző adatcseréktől.
 * A HTTP **kérés-válasz modellt** használ. A kliens küld egy kérést a szervernek, majd a szerver választ küld a kliensnek.
     * A HTTP **kérések** egy metódusból, egy URL-ből, opcionális fejlécekből és törzsből állnak. A leggyakoribb HTTP metódusok a GET, POST, PUT és DELETE.
     * A HTTP **válaszok** egy állapotkódból, valamint opcionális fejlécekből és választörzsből állnak. Az állapotkód jelzi, hogy a kérés sikeres volt-e, és a válasz törzse tartalmazza a kért adatokat (vagy adott esetben a hiba okát).
+* A HTTP egy **állapotmentes** protokoll, ami azt jelenti, hogy nem emlékszik a korábbi kommunikációra a kliens és a szerver között. Minden kérés/válasz csere független az előző adatcseréktől.
 
 ### Kérés
 
