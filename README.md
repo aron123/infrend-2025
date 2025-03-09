@@ -43,6 +43,7 @@ Dokumentáció:
 ## 5. hét
 HTTP kérések kezelése Angular-ban.
 
+- [HTTP protokoll](http.md)
 - [Adatmodell](https://github.com/aron123/infrend-2025/blob/main/_data/chat.models.ts)
 - [Görgetés script](scrolling.md)
 
