@@ -8,35 +8,10 @@
     </div>
 </div>
 
-<div id="message-box">
-    <ul>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-        <li>üzenet</li>
-    </ul>
+<div id="message-box" class="container">
+   @for(message of messages; track $index) {
+      <app-message [message]="message"></app-message>
+   }
 </div>
 
 <div class="fixed-bottom bg-light">
@@ -44,10 +19,13 @@
         <div class="row p-2">
             <div class="col-md-9">
                 <input type="text" class="form-control" id="message" name="message"
-                    placeholder="Type your message ...">
+                    placeholder="Type your message ..."
+                    [(ngModel)]="newMessage"
+                    (keyup.enter)="sendMessage()">
             </div>
             <div class="col-md-3">
-                <button class="btn btn-outline-primary">Submit</button>
+                <button class="btn btn-outline-primary"
+                    (click)="sendMessage()">Submit</button>
             </div>
         </div>
     </div>

@@ -1,1 +1,17 @@
-<p>message works!</p>
+@if (message.role == 'assistant') {
+    <div class="row text-white">
+        <div class="col-md-4 bg-primary rounded">
+            <p class="fw-bold">Assistant</p>
+            <p>{{ message.content }}</p>
+        </div>
+    </div>
+}
+
+@if (message.role == 'user') {
+    <div class="row justify-content-end">
+        <div class="col-md-4 bg-light rounded">
+            <p class="fw-bold">{{ userName }}</p>
+            <p>{{ message.content }}</p>
+        </div>
+    </div>
+}
