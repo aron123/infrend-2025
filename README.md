@@ -55,6 +55,18 @@ Dokumentáció:
 - [OpenAI Developer Platform](https://platform.openai.com/docs/overview)
 - [Gemini Developer API](https://ai.google.dev/)
 
+## 6. hét
+Szerveroldali technológiák alapjai. HTTP szerver készítése Express.js segítségével. Adatbáziskezelés TypeORM-el.
+
+- [Express.js alapok](express.md)
+    - Projekt: Greetings API
+    
+- [TypeORM alapok](typeorm.md)
+
+Dokumentációk:
+- [Express.js](https://expressjs.com/)
+- [TypeORM](https://typeorm.io/)
+
 ## Elérhetőség
 Kiss Áron, tanszéki mérnök<br>
 ME-GÉIK Informatikai Intézet
