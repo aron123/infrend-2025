@@ -45,7 +45,7 @@ Nézzünk bele a létrejött fájlok tartalmába!
 - `index.ts`: Az alkalmazás belépési pontja, ez a .ts fájl indul el futtatáskor.
 - `tsconfig.json`: A TypeScript compiler beállításai.
 
-A MySQL-ben hozzunk létre egy `infrend2024_typeorm` adatbázist, majd nyissuk meg a `data-source.ts`-t, és módosítsuk a beállításokat az alábbiak szerint:
+A MySQL-ben hozzunk létre egy `infrend2025_typeorm` adatbázist, majd nyissuk meg a `data-source.ts`-t, és módosítsuk a beállításokat az alábbiak szerint:
 
 ```ts
 import "reflect-metadata"
