@@ -14,6 +14,14 @@ A következő parancsot egyszer kell futtatni, ennek hatására rendszer szinten
 npm install -g typeorm
 ```
 
+## Adatbázis létrehozása.
+
+- Indítsuk el a WAMPServer szoftvercsomagot, mely tartalmazza a MySQL adatbázist, és a PHPMyAdmin klienst!
+- Jelentkezzünk be a PHPMyAdmin-ba a következő címen: http://localhost/phpmyadmin (felhasználónév `root`, jelszót nem kell megadni)
+- Ezután a felület baloldalán megjelennek a MySQL-ben létrehozott adatbázisok. Új adatbázis hozzáadásához kattintsunk az „Új” gombra!
+- Adatbázisunk neve legyen `infrend2025_typeorm`, karakterkészletként használjuk a `utf8mb4_hungarian_ci` lehetőséget!
+- Ha az adatbázist sikeresen létrehoztuk, az megjelenik a baloldali menüben. Erre kattintva a későbbiekben ellenőrizni tudjuk a TypeORM által végrehajtott műveletek eredményét!
+
 ## Projekt inicializálás
 
 - Meglévő projektbe történő telepítéskor [ezt az útmutatót](https://typeorm.io/#installation) érdemes követni.
@@ -45,7 +53,7 @@ Nézzünk bele a létrejött fájlok tartalmába!
 - `index.ts`: Az alkalmazás belépési pontja, ez a .ts fájl indul el futtatáskor.
 - `tsconfig.json`: A TypeScript compiler beállításai.
 
-A MySQL-ben hozzunk létre egy `infrend2025_typeorm` adatbázist, majd nyissuk meg a `data-source.ts`-t, és módosítsuk a beállításokat az alábbiak szerint:
+Nyissuk meg a `data-source.ts`-t, és módosítsuk a beállításokat az alábbiak szerint:
 
 ```ts
 import "reflect-metadata"
@@ -57,8 +65,8 @@ export const AppDataSource = new DataSource({
     host: "localhost",
     port: 3306,
     username: "root",
-    password: "root", // in case of no password, set it to undefined, or delete this row
-    database: "infrend2024_typeorm",
+    password: undefined, // in case of using a password, set it to a string
+    database: "infrend2025_typeorm",
     synchronize: true,
     logging: true,
     entities: [User],
@@ -66,8 +74,6 @@ export const AppDataSource = new DataSource({
     subscribers: [],
 });
 ```
-
-> **FIGYELEM!** A belépési adatok (username / password) mindenkinél eltérőek lehetnek. Jelszó nélküli kapcsolódás esetén a jelszót tartalmazó sort törölni kell!
 
 ## Projekt indítása
 
