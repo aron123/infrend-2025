@@ -75,7 +75,7 @@ A megismert technológiák gyakorlása, webalkalmazás fejlesztés.
 
 Hasznos anyagok:
 - [Data Transfer Object tervezési minta](https://en.wikipedia.org/wiki/Data_transfer_object)
-- [Angular - Proxying to a backend server](https://angular.io/guide/build#proxying-to-a-backend-server)
+- [Angular - Proxying to a backend server](https://angular.dev/tools/cli/serve#proxying-to-a-backend-server)
 
 ## Elérhetőség
 Kiss Áron, tanszéki mérnök<br>
