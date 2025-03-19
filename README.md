@@ -59,7 +59,7 @@ Dokumentáció:
 Szerveroldali technológiák alapjai. HTTP szerver készítése Express.js segítségével. Adatbáziskezelés TypeORM-el.
 
 - [Express.js alapok](express.md)
-    - Projekt: Greetings API
+    - Projekt: [Greetings API](https://github.com/aron123/infrend-2025/tree/main/backend)
     
 - [TypeORM alapok](typeorm.md)
 
