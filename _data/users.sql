@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1:3306
--- Létrehozás ideje: 2024. Már 24. 15:27
+-- Létrehozás ideje: 2025. Már 23. 13:43
 -- Kiszolgáló verziója: 8.0.31
 -- PHP verzió: 8.0.26
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Adatbázis: `infrend2024_sz18`
+-- Adatbázis: `infrend2025_typeorm`
 --
 
 -- --------------------------------------------------------
@@ -30,69 +30,66 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `user`;
 CREATE TABLE IF NOT EXISTS `user` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `customerId` varchar(255) COLLATE utf8mb4_hungarian_ci DEFAULT NULL,
-  `name` varchar(255) COLLATE utf8mb4_hungarian_ci DEFAULT NULL,
-  `address` varchar(255) COLLATE utf8mb4_hungarian_ci DEFAULT NULL,
-  `phone` varchar(255) COLLATE utf8mb4_hungarian_ci DEFAULT NULL,
-  `idCard` varchar(255) COLLATE utf8mb4_hungarian_ci DEFAULT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `address` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_hungarian_ci NOT NULL,
+  `balance` int NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=51 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_hungarian_ci;
 
 --
 -- A tábla adatainak kiíratása `user`
 --
 
-INSERT INTO `user` (`id`, `customerId`, `name`, `address`, `phone`, `idCard`) VALUES
-(1, '000001', 'Kovács János', '1012 Budapest, Kossuth Lajos utca 12. 1. em. 3.', '+36-20-123-4567', '123456AA'),
-(2, '000002', 'Nagy Péter', '4026 Debrecen, Péterfia utca 8.', '+36-30-234-5678', '234567BB'),
-(3, '000003', 'Kiss Anna', '6720 Szeged, Tisza Lajos körút 14.', '+36-70-345-6789', '345678CC'),
-(4, '000004', 'Tóth Éva', '9022 Győr, Baross Gábor utca 6.', '+36-20-456-7890', '456789DD'),
-(5, '000005', 'Szabó András', '3525 Miskolc, Széchenyi utca 22.', '+36-30-567-8901', '567890EE'),
-(6, '000006', 'Horváth Zsuzsa', '7621 Pécs, Jókai utca 10.', '+36-70-678-9012', '678901FF'),
-(7, '000007', 'Kovács Júlia', '8000 Székesfehérvár, Fő utca 4.', '+36-20-789-0123', '789012GG'),
-(8, '000008', 'Nagy Gábor', '6000 Kecskemét, Kálvin tér 18. 2/3.', '+36-30-890-1234', '890123HH'),
-(9, '000009', 'Kiss Mariann', '4400 Nyíregyháza, Szent István tér 20.', '+36-70-901-2345', '901234II'),
-(10, '000010', 'Tóth József', '5000 Szolnok, Ady Endre út 16.', '+36-20-012-3456', '012345JJ'),
-(11, '000011', 'Szabó Eszter', '2030 Érd, Bajcsy-Zsilinszky út 28. 1. em. 2.', '+36-30-123-4567', '123456KK'),
-(12, '000012', 'Horváth Gergő', '2400 Dunaújváros, Ady Endre út 30. 4. em. 12.', '+36-70-234-5678', '234567LL'),
-(13, '000013', 'Kovács Eszter', '9400 Sopron, Fő tér 24.', '+36-20-345-6789', '345678MM'),
-(14, '000014', 'Nagy Ferenc', '9700 Szombathely, Berzsenyi Dániel tér 26. 3. em. 5.', '+36-30-456-7890', '456789NN'),
-(15, '000015', 'Kiss Réka', '2800 Tatabánya, Fő tér 32.', '+36-70-567-8901', '567890OO'),
-(16, '000016', 'Tóth Balázs', '8200 Veszprém, Fő tér 34.', '+36-20-678-9012', '678901PP'),
-(17, '000017', 'Szabó Tamás', '8900 Zalaegerszeg, Petőfi Sándor utca 36.', '+36-30-789-0123', '789012QQ'),
-(18, '000018', 'Horváth Emese', '3300 Eger, Dobó tér 38. 2. em. 7.', '+36-70-890-1234', '890123RR'),
-(19, '000019', 'Kovács Katalin', '8800 Nagykanizsa, Fő tér 40.', '+36-20-901-2345', '901234SS'),
-(20, '000020', 'Nagy István', '8000 Székesfehérvár, Fő utca 42.', '+36-30-012-3456', '012345TT'),
-(21, '000021', 'Kovács János', '1012 Budapest, Kossuth Lajos utca 12. 1. em. 3.', '+36-20-123-4567', '123456UU'),
-(22, '000022', 'Nagy Péter', '4026 Debrecen, Péterfia utca 8.', '+36-30-234-5678', '234567VV'),
-(23, '000023', 'Kiss Anna', '6720 Szeged, Tisza Lajos körút 14.', '+36-70-345-6789', '345678WW'),
-(24, '000024', 'Tóth Éva', '9022 Győr, Baross Gábor utca 6.', '+36-20-456-7890', '456789XX'),
-(25, '000025', 'Szabó András', '3525 Miskolc, Széchenyi utca 22.', '+36-30-567-8901', '567890YY'),
-(26, '000026', 'Horváth Zsuzsa', '7621 Pécs, Jókai utca 10.', '+36-70-678-9012', '678901ZZ'),
-(27, '000027', 'Kovács Júlia', '8000 Székesfehérvár, Fő utca 4.', '+36-20-789-0123', '789012AB'),
-(28, '000028', 'Nagy Gábor', '6000 Kecskemét, Kálvin tér 18. 2/3.', '+36-30-890-1234', '890123BC'),
-(29, '000029', 'Kiss Mariann', '4400 Nyíregyháza, Szent István tér 20.', '+36-70-901-2345', '901234CD'),
-(30, '000030', 'Tóth József', '5000 Szolnok, Ady Endre út 16.', '+36-20-012-3456', '012345DE'),
-(31, '000031', 'Szabó Eszter', '2030 Érd, Bajcsy-Zsilinszky út 28. 1. em. 2.', '+36-30-123-4567', '123456EF'),
-(32, '000032', 'Horváth Gergő', '2400 Dunaújváros, Ady Endre út 30. 4. em. 12.', '+36-70-234-5678', '234567FG'),
-(33, '000033', 'Kovács Eszter', '9400 Sopron, Fő tér 24.', '+36-20-345-6789', '345678GH'),
-(34, '000034', 'Nagy Ferenc', '9700 Szombathely, Berzsenyi Dániel tér 26. 3. em. 5.', '+36-30-456-7890', '456789HI'),
-(35, '000035', 'Kiss Réka', '2800 Tatabánya, Fő tér 32.', '+36-70-567-8901', '567890IJ'),
-(36, '000036', 'Tóth Balázs', '8200 Veszprém, Fő tér 34.', '+36-20-678-9012', '678901JK'),
-(37, '000037', 'Szabó Tamás', '8900 Zalaegerszeg, Petőfi Sándor utca 36.', '+36-30-789-0123', '789012KL'),
-(38, '000038', 'Horváth Emese', '3300 Eger, Dobó tér 38. 2. em. 7.', '+36-70-890-1234', '890123LM'),
-(39, '000039', 'Kovács Katalin', '8800 Nagykanizsa, Fő tér 40.', '+36-20-901-2345', '901234MN'),
-(40, '000040', 'Nagy István', '8000 Székesfehérvár, Fő utca 42.', '+36-30-012-3456', '012345NO'),
-(41, '000041', 'Kovács János', '1012 Budapest, Kossuth Lajos utca 12. 1. em. 3.', '+36-20-123-4567', '123456OP'),
-(42, '000042', 'Nagy Péter', '4026 Debrecen, Péterfia utca 8.', '+36-30-234-5678', '234567PQ'),
-(43, '000043', 'Kiss Anna', '6720 Szeged, Tisza Lajos körút 14.', '+36-70-345-6789', '345678QR'),
-(44, '000044', 'Tóth Éva', '9022 Győr, Baross Gábor utca 6.', '+36-20-456-7890', '456789RS'),
-(45, '000045', 'Szabó András', '3525 Miskolc, Széchenyi utca 22.', '+36-30-567-8901', '567890ST'),
-(46, '000046', 'Horváth Zsuzsa', '7621 Pécs, Jókai utca 10.', '+36-70-678-9012', '678901TU'),
-(47, '000047', 'Kovács Júlia', '8000 Székesfehérvár, Fő utca 4.', '+36-20-789-0123', '789012UV'),
-(48, '000048', 'Nagy Gábor', '6000 Kecskemét, Kálvin tér 18. 2/3.', '+36-30-890-1234', '890123VW'),
-(49, '000049', 'Kiss Mariann', '4400 Nyíregyháza, Szent István tér 20.', '+36-70-901-2345', '901234WX'),
-(50, '000050', 'Tóth József', '5000 Szolnok, Ady Endre út 16.', '+36-20-012-3456', '012345XY');
+INSERT INTO `user` (`id`, `name`, `address`, `balance`) VALUES
+(2, 'Kiss Péter', '1053 Budapest, Kossuth Lajos utca 12.', 150000),
+(3, 'Nagy Éva', '4024 Debrecen, Petőfi tér 5.', 230000),
+(4, 'Tóth Gábor', '6720 Szeged, Rákóczi út 8.', 175000),
+(5, 'Szabó Anna', '7621 Pécs, Ady Endre utca 3.', 120000),
+(6, 'Farkas Dániel', '9021 Győr, Bartók Béla út 25.', 198000),
+(7, 'Molnár László', '3530 Miskolc, Dózsa György utca 14.', 210000),
+(8, 'Horváth Zoltán', '3300 Eger, Széchenyi tér 7.', 142000),
+(9, 'Varga Mária', '6000 Kecskemét, Arany János utca 6.', 187000),
+(10, 'Balogh István', '8000 Székesfehérvár, Deák Ferenc utca 9.', 160000),
+(11, 'Szilágyi Tamás', '4400 Nyíregyháza, Kertész utca 11.', 190000),
+(12, 'Lakatos Brigitta', '9700 Szombathely, Móra Ferenc utca 20.', 140000),
+(13, 'Fehér András', '2800 Tatabánya, Táncsics Mihály út 3.', 175500),
+(14, 'Kovács Norbert', '8200 Veszprém, Kálvin tér 22.', 220000),
+(15, 'Juhász Csilla', '5600 Békéscsaba, Madách Imre utca 18.', 165000),
+(16, 'Takács Balázs', '8900 Zalaegerszeg, Kossuth tér 2.', 155000),
+(17, 'Oláh Katalin', '2400 Dunaújváros, Hunyadi út 9.', 172000),
+(18, 'Bognár Sándor', '3100 Salgótarján, Jókai Mór utca 17.', 135000),
+(19, 'Gál Ferenc', '2500 Esztergom, Rákóczi tér 5.', 195000),
+(20, 'Sándor Erzsébet', '6500 Baja, Kinizsi Pál utca 16.', 143000),
+(21, 'Barta Attila', '8600 Siófok, Rózsa utca 8.', 168000),
+(22, 'Majoros Eszter', '4200 Hajdúszoboszló, József Attila út 4.', 175000),
+(23, 'Pintér Gergely', '2900 Komárom, Szabadság tér 19.', 185000),
+(24, 'Rácz Anikó', '7100 Szekszárd, Táncsics Mihály utca 2.', 200000),
+(25, 'Fodor Lilla', '2700 Cegléd, Kőrösi út 7.', 137000),
+(26, 'Vass Zsolt', '5700 Gyula, Petőfi Sándor utca 10.', 182000),
+(27, 'Simon Roland', '5900 Orosháza, Bem József utca 21.', 154000),
+(28, 'Boros Gábor', '7400 Kaposvár, Kossuth Lajos tér 3.', 145000),
+(29, 'Béres Krisztián', '2030 Érd, Dombóvári út 13.', 178000),
+(30, 'Hegedűs Tamara', '2600 Vác, Szent István tér 14.', 190500),
+(31, 'Török Ádám', '2750 Nagykőrös, Ady Endre út 22.', 157500),
+(32, 'Fekete Levente', '2100 Gödöllő, Béke tér 6.', 162000),
+(33, 'Bíró Nóra', '2000 Szentendre, Árpád fejedelem út 9.', 170000),
+(34, 'Dömötör László', '3000 Hatvan, Sárkány utca 18.', 148000),
+(35, 'Benedek Laura', '2370 Dabas, Radnóti Miklós út 5.', 158000),
+(36, 'Katona Zsombor', '3400 Mezőkövesd, Árpád tér 11.', 175500),
+(37, 'Gulyás Petra', '2890 Tata, Kinizsi utca 13.', 141000),
+(38, 'Somogyi Márk', '9400 Sopron, Hunyadi út 7.', 159000),
+(39, 'Veres Réka', '7150 Bonyhád, Béke utca 16.', 132000),
+(40, 'Kelemen Ákos', '7700 Mohács, Hunyadi tér 4.', 195500),
+(41, 'Hollósi Judit', '7200 Dombóvár, József Attila tér 21.', 165500),
+(42, 'Lantos Lilla', '2510 Dorog, Kossuth tér 12.', 144000),
+(43, 'Pálfi Tibor', '6300 Kalocsa, Kinizsi utca 10.', 178500),
+(44, 'Havasi Tamás', '8400 Ajka, Fő tér 9.', 188000),
+(45, 'Tarján Dénes', '3700 Kazincbarcika, Széchenyi út 15.', 155500),
+(46, 'Medgyesi Patrik', '3580 Tiszaújváros, Béke tér 14.', 160500),
+(47, 'Zsiga Virág', '8380 Hévíz, Deák tér 11.', 199000),
+(48, 'Karácsonyi Gábor', '6900 Makó, Táncsics Mihály tér 8.', 153000),
+(49, 'Magyar Zita', '8230 Balatonfüred, Kossuth tér 17.', 166000),
+(50, 'Bujdosó Orsolya', '5630 Békés, Ady Endre tér 5.', 172500);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
