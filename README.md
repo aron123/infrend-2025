@@ -71,7 +71,7 @@ Dokumentációk:
 A megismert technológiák gyakorlása, webalkalmazás fejlesztés.
 
 - [Adatbázis](https://raw.githubusercontent.com/aron123/infrend-2025/main/_data/users.sql)
-- Projekt
+- Projekt: [Banki számlavezetés](https://github.com/aron123/infrend-2025/tree/main/banking-app)
 
 Hasznos anyagok:
 - [Data Transfer Object tervezési minta](https://en.wikipedia.org/wiki/Data_transfer_object)
