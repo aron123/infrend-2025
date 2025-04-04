@@ -14,7 +14,15 @@ export abstract class Controller {
 
     getOne = async (req, res) => {
         try {
-            // TODO
+            const id = req.params['id'];
+            const entity = await this.repository.findOneBy({ id: id });
+
+            if (!entity) {
+                res.status(404).json({ message: 'The given id does not exist.' });
+                return;
+            }
+
+            res.json(entity);
         } catch (err) {
             this.handleError(res, err);
         }
@@ -22,7 +30,11 @@ export abstract class Controller {
 
     create = async (req, res) => {
         try {
-            // TODO
+            const entityToCreate = this.repository.create(req.body);
+            delete entityToCreate.id;
+
+            const entityCreated = await this.repository.save(entityToCreate);
+            res.json(entityCreated);
         } catch (err) {
             this.handleError(res, err);
         }
@@ -30,7 +42,16 @@ export abstract class Controller {
 
     update = async (req, res) => {
         try {
-            // TODO
+            const entityToUpdate = this.repository.create(req.body);
+
+            const currentEntity = await this.repository.findOneBy({ id: entityToUpdate.id });
+            if (!currentEntity) {
+                res.status(404).json({ message: 'The given id does not exist.' });
+                return;
+            }
+
+            const entityUpdated = await this.repository.save(entityToUpdate);
+            res.json(entityUpdated);
         } catch (err) {
             this.handleError(res, err);
         }
@@ -38,7 +59,16 @@ export abstract class Controller {
 
     delete = async (req, res) => {
         try {
-            // TODO
+            const id = req.params['id'];
+            const entityToDelete = await this.repository.findOneBy({ id: id });
+
+            if (!entityToDelete) {
+                res.status(404).json({ message: 'The given id does not exist.' });
+                return;
+            }
+
+            await this.repository.remove(entityToDelete);
+            res.send();
         } catch (err) {
             this.handleError(res, err);
         }
