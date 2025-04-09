@@ -10,5 +10,9 @@ export const routes: Routes = [
     {
         path: 'create-user',
         component: UserEditorComponent
+    },
+    {
+        path: 'edit-user/:id',
+        component: UserEditorComponent
     }
 ];

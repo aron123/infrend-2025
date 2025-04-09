@@ -17,8 +17,8 @@
                         <td>{{ user.address }}</td>
                         <td>{{ user.balance }} Ft</td>
                         <td>
-                            <button class="btn btn-outline-primary me-2">Szerkesztés</button>
-                            <button class="btn btn-outline-danger">Törlés</button>
+                            <button class="btn btn-outline-primary me-2" (click)="navigateToUserForm(user.id)">Szerkesztés</button>
+                            <button class="btn btn-outline-danger" (click)="deleteUser($index)">Törlés</button>
                         </td>
                     </tr>
                 }
