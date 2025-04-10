@@ -533,7 +533,7 @@ export const appConfig: ApplicationConfig = {
 
 A `multi` beállítás azt jelzi, hogy több interceptor-unk is lehet. Ez később még lényeges lesz, hiszen a szerverről visszaérkező választ is vizsgálni fogjuk.
 
-Mivel korábban már bejelentkeztünk, könnyen ellenőrizhetjük, hogy token-ünk ténylegesen szerepel-e a kimenő kérésekben. Nyissuk meg a Konzolt (F12), majd lépjünk át a Network fülre. Ezt követően nyissuk meg pl. a Kategóriák menüpontot!
+Mivel korábban már bejelentkeztünk, könnyen ellenőrizhetjük, hogy token-ünk ténylegesen szerepel-e a kimenő kérésekben. Nyissuk meg a Konzolt (F12), majd lépjünk át a Network fülre. Ezt követően nyissunk meg egy tetszőleges menüpontot, ahol adatbetöltés történik!
 
 A Network fülön megjelenő kérés fejlécei között meg kell találnunk az `Authorization`-t:
 
