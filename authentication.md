@@ -7,23 +7,23 @@ Nem törekszünk azonban a teljességre, a tutorial végére elkészülő alkalm
 
 ## Tartalom
 
-- [Kezdő projekt](#kezd-projekt)
-- [Cél](#cl)
+- [Kezdő projekt](#kezdő-projekt)
+- [Cél](#cél)
 - [JWT](#jwt)
-- [Szerveroldal védelme](#szerveroldal-vdelme)
-    * [Felhasználói regisztráció](#felhasznli-regisztrci)
-    * [Bejelentkezés](#bejelentkezs)
-    * [HTTP végpontok védelme](#http-vgpontok-vdelme)
-- [Kliensoldal védelme](#kliensoldal-vdelme)
-    * [Regisztrációs felület](#regisztrcis-fellet)
-    * [Token kezelés](#token-kezels)
-    * [Bejelentkezés](#bejelentkezs-1)
-    * [HTTP kérések kezelése](#http-krsek-kezelse)
-    * [HTTP válaszok kezelése](#http-vlaszok-kezelse)
-    * [Útvonalak védelme](#tvonalak-vdelme)
-    * [Kilépés](#kilps)
-    * [UI elemek elrejtése](#ui-elemek-elrejtse)
-- [Továbbfejlesztési lehetőségek](#tovbbfejlesztsi-lehetsgek)
+- [Szerveroldal védelme](#szerveroldal-védelme)
+    * [Felhasználói regisztráció](#felhasználói-regisztráció)
+    * [Bejelentkezés](#bejelentkezés)
+    * [HTTP végpontok védelme](#http-végpontok-védelme)
+- [Kliensoldal védelme](#kliensoldal-védelme)
+    * [Regisztrációs felület](#regisztrációs-felület)
+    * [Token kezelés](#token-kezelés)
+    * [Bejelentkezés](#bejelentkezés-1)
+    * [HTTP kérések kezelése](#http-kérések-kezelése)
+    * [HTTP válaszok kezelése](#http-válaszok-kezelése)
+    * [Útvonalak védelme](#útvonalak-védelme)
+    * [Kilépés](#kilépés)
+    * [UI elemek elrejtése](#ui-elemek-elrejtése)
+- [Továbbfejlesztési lehetőségek](#továbbfejlesztési-lehetőségek)
 
 ## Kezdő projekt
 
@@ -287,7 +287,7 @@ Most próbáljuk meg törölni a terméket: `DELETE http://localhost:3000/api/us
 
 Ebben az esetben az autentikációra vonatkozó hibaüzenetet, és a `401 Unauthorized` státuszkódot kell visszakapnunk.
 
-Váltsunk át a Postman-ben az "Authorization" fülre, a "Type" legördülő menüből válasszuk ki a "Bearer token" lehetőséget! Ezt követően a jobb oldalon szereplő "Token" mezőbe másoljuk be a [korábban elmentett](#bejelentkezs) JWT tokenünket! Ha átváltunk a "Headers" fülre, látható, hogy a Postman létrehozta az `Authorization` fejlécet, melyben a megadott token szerepel, a szerver által elvárt `Bearer <jwt_token>` formátumban.
+Váltsunk át a Postman-ben az "Authorization" fülre, a "Type" legördülő menüből válasszuk ki a "Bearer token" lehetőséget! Ezt követően a jobb oldalon szereplő "Token" mezőbe másoljuk be a [korábban elmentett](#bejelentkezés) JWT tokenünket! Ha átváltunk a "Headers" fülre, látható, hogy a Postman létrehozta az `Authorization` fejlécet, melyben a megadott token szerepel, a szerver által elvárt `Bearer <jwt_token>` formátumban.
 
 Most küldjük be újra a törlésre vonatkozó kérést! Ha rendszerünk megfelelően működik, 200-as státuszkódot kell válaszként visszakapnunk. Ez azt jelenti, hogy a termék törlésre került.
 
