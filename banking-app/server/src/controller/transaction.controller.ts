@@ -53,7 +53,22 @@ export class TransactionController extends Controller {
     };
 
     getAllTransactionsOfUser = async (req, res) => {
-        // TODO
-        res.send();
+        try {
+            const userId = req.params['userId'];
+
+            const outgoingTr = await this.repository.findBy({
+                sender: { id: userId }
+            });
+
+            const incomingTr = await this.repository.findBy({
+                receiver: { id: userId }
+            });
+
+            const transactions = outgoingTr.concat(incomingTr).sort((a, b) => a.id - b.id);
+
+            res.json(transactions);
+        } catch (err) {
+            this.handleError(res, err);
+        }
     };
 }

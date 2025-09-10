@@ -36,4 +36,8 @@ export class UserListComponent implements OnInit {
   navigateToUserForm(id: number) {
     this.router.navigate(['edit-user', id]);
   }
+
+  navigateToTransactions(userId: number) {
+    this.router.navigate(['transactions-of', userId]);
+  }
 }

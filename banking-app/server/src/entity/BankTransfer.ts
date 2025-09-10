@@ -11,9 +11,9 @@ export class BankTransfer implements BankTransferDTO {
     @Column()
     amount: number;
 
-    @ManyToOne(() => User, (user) => user.outgoingTransactions)
+    @ManyToOne(() => User, (user) => user.outgoingTransactions, { eager: true })
     sender: User;
 
-    @ManyToOne(() => User, (user) => user.incomingTransactions)
+    @ManyToOne(() => User, (user) => user.incomingTransactions, { eager: true })
     receiver: User;
 }
